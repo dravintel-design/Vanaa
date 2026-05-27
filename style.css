@@ -831,6 +831,110 @@ body {
 .pkg-note a:hover { text-decoration: underline; }
 
 
+/* ===== MISSION ===== */
+.mission-pull {
+  text-align: center;
+  position: relative;
+  padding: 20px 60px 48px;
+  margin-bottom: 56px;
+}
+.mission-open-quote,
+.mission-close-quote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 120px;
+  line-height: 0;
+  color: var(--jade);
+  opacity: 0.35;
+  position: absolute;
+  pointer-events: none;
+}
+.mission-open-quote { top: 48px; left: 16px; }
+.mission-close-quote { bottom: 12px; right: 16px; }
+.mission-pull p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 3.5vw, 38px);
+  font-weight: 600;
+  font-style: italic;
+  color: var(--cream);
+  line-height: 1.45;
+  position: relative;
+}
+.br-desk { display: none; }
+@media (min-width: 768px) { .br-desk { display: block; } }
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+@media (max-width: 820px) { .mission-grid { grid-template-columns: 1fr; } }
+
+.mission-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(116,198,157,0.18);
+  border-radius: var(--r-md);
+  padding: 40px 36px;
+  transition: all var(--trans);
+}
+.mission-card:hover {
+  background: rgba(64,145,108,0.1);
+  border-color: rgba(116,198,157,0.32);
+  transform: translateY(-4px);
+}
+.mission-card-vision {
+  background: rgba(201,168,76,0.06);
+  border-color: rgba(201,168,76,0.2);
+}
+.mission-card-vision:hover {
+  background: rgba(201,168,76,0.1);
+  border-color: rgba(201,168,76,0.35);
+}
+
+.mcard-icon { font-size: 40px; margin-bottom: 16px; display: block; }
+.mcard-tag {
+  display: inline-block;
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  padding: 5px 14px; border-radius: 100px;
+  background: rgba(64,145,108,0.18);
+  border: 1px solid rgba(116,198,157,0.25);
+  color: var(--sage);
+  margin-bottom: 20px;
+}
+.mcard-tag-gold {
+  background: rgba(201,168,76,0.15);
+  border-color: rgba(201,168,76,0.3);
+  color: var(--gold);
+}
+.mcard-body {
+  font-size: 16px;
+  color: rgba(183,228,199,0.75);
+  line-height: 1.8;
+}
+
+.vision-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 28px;
+}
+.vp {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(201,168,76,0.08);
+  border: 1px solid rgba(201,168,76,0.18);
+  border-radius: var(--r-sm);
+  padding: 12px 14px;
+}
+.vp-icon { font-size: 22px; flex-shrink: 0; }
+.vp span:last-child {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--gold-lt);
+  line-height: 1.35;
+}
+
 /* ===== FINAL CTA ===== */
 .cta-banner {
   position: relative; overflow: hidden;
