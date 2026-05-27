@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vanaa — Plant Without Boundaries</title>
+  <meta name="description" content="Vanaa plants trees on your behalf and certifies your contribution to a greener world. Founded by Logendra Lingam." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 38 C20 38 8 28 8 18 C8 11 13.4 6 20 6 C26.6 6 32 11 32 18 C32 28 20 38 20 38Z" fill="#4ade80" opacity="0.9"/>
+            <path d="M20 38 C20 38 12 26 12 18 C12 13.6 15.6 10 20 10" fill="#22c55e"/>
+            <line x1="20" y1="22" x2="20" y2="38" stroke="#15803d" stroke-width="1.5"/>
+            <line x1="20" y1="28" x2="15" y2="24" stroke="#15803d" stroke-width="1.2"/>
+            <line x1="20" y1="33" x2="25" y2="29" stroke="#15803d" stroke-width="1.2"/>
+          </svg>
+        </div>
+        <span class="logo-text">Vanaa</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#who-contributes">Contributors</a></li>
+        <li><a href="#founder">Founder</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#plant">Packages</a></li>
+      </ul>
+      <a href="#plant" class="btn btn-nav">Plant a Tree</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="navMobile">
+      <a href="#how-it-works">How It Works</a>
+      <a href="#who-contributes">Contributors</a>
+      <a href="#founder">Founder</a>
+      <a href="#impact">Impact</a>
+      <a href="#plant">Packages</a>
+      <a href="#plant" class="btn btn-primary" style="margin-top:8px; text-align:center; justify-content:center;">Plant a Tree</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <!-- Forest background layers -->
+    <div class="forest-bg">
+      <div class="forest-sky"></div>
+      <div class="forest-canopy forest-canopy-back"></div>
+      <div class="forest-canopy forest-canopy-mid"></div>
+      <div class="forest-canopy forest-canopy-front"></div>
+      <div class="forest-floor"></div>
+      <div class="forest-rays"></div>
+      <div class="forest-mist"></div>
+    </div>
+
+    <!-- Floating leaves -->
+    <div class="leaves-container" id="leavesContainer"></div>
+
+    <!-- Hero content -->
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal-hero">
+        <span class="eyebrow-dot"></span>
+        A nature initiative from Tamil Nadu, India
+        <span class="eyebrow-dot"></span>
+      </div>
+
+      <h1 class="hero-title reveal-hero" data-delay="100">
+        <span class="title-line">You live the city.</span>
+        <span class="title-line title-line-accent">We breathe the forest.</span>
+      </h1>
+
+      <!-- Pull Quote Rotator -->
+      <div class="quote-rotator reveal-hero" data-delay="200" id="quoteRotator">
+        <div class="quote-track" id="quoteTrack">
+          <blockquote class="pull-quote active">
+            <p>"The best time to plant a tree was 20 years ago.<br/>The second best time is <em>right now.</em>"</p>
+            <cite>— Ancient Proverb</cite>
+          </blockquote>
+          <blockquote class="pull-quote">
+            <p>"We do not inherit the earth from our ancestors.<br/>We <em>borrow it</em> from our children."</p>
+            <cite>— Native American Wisdom</cite>
+          </blockquote>
+          <blockquote class="pull-quote">
+            <p>"A society grows great when old men plant trees<br/>whose shade <em>they shall never sit in.</em>"</p>
+            <cite>— Greek Proverb</cite>
+          </blockquote>
+          <blockquote class="pull-quote">
+            <p>"What we are doing to the forests of the world<br/>is but a mirror reflection of what we do <em>to ourselves.</em>"</p>
+            <cite>— Mahatma Gandhi</cite>
+          </blockquote>
+          <blockquote class="pull-quote">
+            <p>"Vanaa was born from a simple belief —<br/>that <em>every person deserves</em> to leave a green legacy."</p>
+            <cite>— Logendra Lingam, Founder of Vanaa</cite>
+          </blockquote>
+        </div>
+        <div class="quote-dots" id="quoteDots">
+          <button class="qdot active" aria-label="Quote 1"></button>
+          <button class="qdot" aria-label="Quote 2"></button>
+          <button class="qdot" aria-label="Quote 3"></button>
+          <button class="qdot" aria-label="Quote 4"></button>
+          <button class="qdot" aria-label="Quote 5"></button>
+        </div>
+      </div>
+
+      <div class="hero-ctas reveal-hero" data-delay="300">
+        <a href="#plant" class="btn btn-forest">
+          <span class="btn-leaf">🌱</span>
+          Plant on My Behalf
+        </a>
+        <a href="#how-it-works" class="btn btn-glass">Discover Vanaa</a>
+      </div>
+
+      <!-- Hero stats strip -->
+      <div class="hero-stats-strip reveal-hero" data-delay="400">
+        <div class="hstat">
+          <span class="hstat-num" data-count="70">0</span>
+          <span class="hstat-label">Trees Planted</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-num" data-count="43">0</span>
+          <span class="hstat-label">Certificates Issued</span>
+        </div>
+        <div class="hstat-sep"></div>
+        <div class="hstat">
+          <span class="hstat-num" data-count="1.5" data-decimal="1">0</span>
+          <span class="hstat-label">Tonnes CO₂ Offset</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero-scroll">
+      <div class="scroll-stem"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- LUSH DIVIDER -->
+  <div class="organic-divider">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C180,80 360,0 540,40 C720,80 900,0 1080,40 C1260,80 1440,20 1440,40 L1440,80 L0,80 Z" fill="#0e2d18"/>
+    </svg>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section class="section section-forest" id="how-it-works">
+    <div class="vine-left"></div>
+    <div class="vine-right"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="tag tag-gold">Simple Process</span>
+        <h2 class="section-title tc-cream">Three steps to your green legacy</h2>
+        <p class="section-sub tc-sage">No soil needed. No space required. Just a decision to care.</p>
+      </div>
+      <div class="steps-row">
+        <div class="step-card reveal" data-delay="0">
+          <div class="step-num">01</div>
+          <div class="step-glyph">🎯</div>
+          <h3>Choose your contribution</h3>
+          <p>Select a package — whether you're offsetting a construction project, your daily commute, or simply choosing to care for the planet.</p>
+        </div>
+        <div class="step-arrow reveal" data-delay="80">
+          <svg width="48" height="24" viewBox="0 0 48 24" fill="none"><path d="M0 12 H40 M32 4 L40 12 L32 20" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="step-card reveal" data-delay="160">
+          <div class="step-num">02</div>
+          <div class="step-glyph">🌱</div>
+          <h3>We plant on your behalf</h3>
+          <p>Our trained field partners plant native trees in curated land zones. Every tree is geo-tagged, photographed, and tracked live.</p>
+        </div>
+        <div class="step-arrow reveal" data-delay="240">
+          <svg width="48" height="24" viewBox="0 0 48 24" fill="none"><path d="M0 12 H40 M32 4 L40 12 L32 20" stroke="#4ade80" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="step-card reveal" data-delay="320">
+          <div class="step-num">03</div>
+          <div class="step-glyph">📜</div>
+          <h3>Receive your certificate</h3>
+          <p>A verified digital certificate with your name, tree species, GPS location, and planting date. Frame it, share it, be proud of it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORGANIC DIVIDER -->
+  <div class="organic-divider flip">
+    <svg viewBox="0 0 1440 80" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C180,0 360,80 540,40 C720,0 900,80 1080,40 C1260,0 1440,60 1440,40 L1440,80 L0,80 Z" fill="#0e2d18"/>
+    </svg>
+  </div>
+
+  <!-- WHO CONTRIBUTES -->
+  <section class="section section-cream" id="who-contributes">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="tag tag-green">For Everyone</span>
+        <h2 class="section-title tc-forest">Anyone can leave a green mark</h2>
+        <p class="section-sub tc-slate">You don't need land. You don't need time. You just need the will.</p>
+      </div>
+      <div class="contrib-grid">
+        <div class="contrib-card reveal" data-delay="0">
+          <div class="contrib-top">
+            <span class="contrib-emoji">🏗️</span>
+            <span class="contrib-badge">Green Building Badge</span>
+          </div>
+          <h3>Builders & Developers</h3>
+          <p>Every building replaces green space. Offset your construction footprint and earn a Nature Contribution Certificate for your project.</p>
+        </div>
+        <div class="contrib-card reveal" data-delay="100">
+          <div class="contrib-top">
+            <span class="contrib-emoji">🚗</span>
+            <span class="contrib-badge">Eco Commuter Badge</span>
+          </div>
+          <h3>Daily Commuters</h3>
+          <p>Your car or bike emits carbon every day. Plant monthly and get a Responsible Commuter Certificate that proves you're taking action.</p>
+        </div>
+        <div class="contrib-card reveal" data-delay="200">
+          <div class="contrib-top">
+            <span class="contrib-emoji">🏢</span>
+            <span class="contrib-badge">City Planter Badge</span>
+          </div>
+          <h3>Urban Apartment Dwellers</h3>
+          <p>No balcony, no backyard — no problem. Your trees grow in real soil, in real forests, in your name. Vanaa is your garden.</p>
+        </div>
+        <div class="contrib-card reveal" data-delay="300">
+          <div class="contrib-top">
+            <span class="contrib-emoji">🏭</span>
+            <span class="contrib-badge">Corporate Green Badge</span>
+          </div>
+          <h3>Companies & Startups</h3>
+          <p>Make your ESG commitments tangible. Plant trees for your team, launches, or sustainability reports — with verified proof.</p>
+        </div>
+        <div class="contrib-card reveal" data-delay="400">
+          <div class="contrib-top">
+            <span class="contrib-emoji">🎓</span>
+            <span class="contrib-badge">Green Campus Badge</span>
+          </div>
+          <h3>Schools & Colleges</h3>
+          <p>Plant on behalf of graduating batches, creating a living legacy for every student — something that will outlast all of us.</p>
+        </div>
+        <div class="contrib-card reveal" data-delay="500">
+          <div class="contrib-top">
+            <span class="contrib-emoji">💑</span>
+            <span class="contrib-badge">Personal Legacy Badge</span>
+          </div>
+          <h3>Individuals & Families</h3>
+          <p>Celebrate birthdays, anniversaries, or loved ones with a tree that grows for decades. Nature is the most lasting gift you can give.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER SECTION -->
+  <section class="section section-founder" id="founder">
+    <div class="founder-forest-bg"></div>
+    <div class="container">
+      <div class="founder-layout">
+        <!-- Portrait side -->
+        <div class="founder-portrait-col reveal">
+          <div class="founder-frame">
+            <div class="founder-photo-wrap">
+              <div class="founder-photo-placeholder">
+                <div class="founder-initials">LL</div>
+                <div class="founder-photo-leaves">
+                  <span class="fpl fpl-1">🍃</span>
+                  <span class="fpl fpl-2">🌿</span>
+                  <span class="fpl fpl-3">🌱</span>
+                  <span class="fpl fpl-4">🍀</span>
+                </div>
+              </div>
+            </div>
+            <div class="founder-name-plate">
+              <div class="fnp-name">Logendra Lingam</div>
+              <div class="fnp-title">Founder, Vanaa</div>
+              <div class="fnp-tag">
+                <span>🎒</span> School Student & Nature Lover
+              </div>
+            </div>
+            <div class="founder-social">
+              <a href="#" class="fsoc" aria-label="Twitter">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </a>
+              <a href="#" class="fsoc" aria-label="Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="#" class="fsoc" aria-label="LinkedIn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story side -->
+        <div class="founder-story reveal" data-delay="150">
+          <span class="tag tag-gold">The Founder</span>
+          <h2 class="section-title tc-cream">
+            A schoolboy who asked:<br />
+            <em>"Why can't everyone have a tree?"</em>
+          </h2>
+
+          <div class="founder-quote-block">
+            <div class="fqb-mark">"</div>
+            <p>I used to walk to school every day through roads that lost their trees to new buildings. I saw construction everywhere but no planting. I wondered — why does the person who builds get to take the green away, and the rest of us just accept it?</p>
+            <p>That question became Vanaa. If you can't plant, we plant for you. If you don't have space, we create space. If you just care, we make sure nature knows.</p>
+            <cite>— Logendra Lingam, Age 17</cite>
+          </div>
+
+          <div class="founder-story-body">
+            <p>Logendra grew up in Tamil Nadu with a deep love for the natural world — spending weekends tending to plants, reading about biodiversity, and dreaming of forests that could outlast buildings.</p>
+            <p>At 16, he launched Vanaa as a school initiative. Today, the platform has planted <strong>70 trees</strong> in Tamil Nadu — every single one on behalf of someone who couldn't plant but chose to care. The forest is just getting started.</p>
+          </div>
+
+          <div class="founder-values">
+            <div class="fval">
+              <span class="fval-icon">🌳</span>
+              <div>
+                <strong>Nature-first vision</strong>
+                <span>Every decision at Vanaa starts with one question: is this good for the tree?</span>
+              </div>
+            </div>
+            <div class="fval">
+              <span class="fval-icon">🤝</span>
+              <div>
+                <strong>Inclusive by design</strong>
+                <span>Built so that no economic or physical barrier stops anyone from giving back to nature.</span>
+              </div>
+            </div>
+            <div class="fval">
+              <span class="fval-icon">✨</span>
+              <div>
+                <strong>Verified transparency</strong>
+                <span>Logendra insists every tree be photographed, tagged, and traceable — always.</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#plant" class="btn btn-forest" style="margin-top:32px;">Plant in His Vision</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATE PREVIEW -->
+  <section class="section section-cream" id="certificate">
+    <div class="container">
+      <div class="cert-layout">
+        <div class="cert-info reveal">
+          <span class="tag tag-green">Verified & Authentic</span>
+          <h2 class="section-title tc-forest">Your certificate.<br/>Your proof.</h2>
+          <p class="section-sub tc-slate" style="text-align:left;">Every certificate issued by Vanaa is digitally signed, tamper-proof, and includes real tree data. It's not just a document — it's evidence of life you brought into the world.</p>
+          <ul class="cert-feats">
+            <li><span class="cf-check">✓</span><div><strong>GPS-tagged location</strong><span>Know exactly where your tree stands</span></div></li>
+            <li><span class="cf-check">✓</span><div><strong>Tree species & planting date</strong><span>Full transparency on what was planted</span></div></li>
+            <li><span class="cf-check">✓</span><div><strong>Unique QR verification</strong><span>Anyone can verify your certificate instantly</span></div></li>
+            <li><span class="cf-check">✓</span><div><strong>Digital + printable</strong><span>Share online or frame it on your wall</span></div></li>
+          </ul>
+          <a href="#plant" class="btn btn-forest">Get Your Certificate</a>
+        </div>
+        <div class="cert-preview-col reveal" data-delay="200">
+          <div class="cert">
+            <div class="cert-border-deco">
+              <span class="cbd cbd-tl">🌿</span>
+              <span class="cbd cbd-tr">🌿</span>
+              <span class="cbd cbd-bl">🌿</span>
+              <span class="cbd cbd-br">🌿</span>
+            </div>
+            <div class="cert-head">
+              <div class="cert-logo-line">🌿 VANAA</div>
+              <div class="cert-htitle">Certificate of Nature</div>
+              <div class="cert-hsub">C O N T R I B U T I O N</div>
+              <div class="cert-hline"></div>
+            </div>
+            <div class="cert-body">
+              <p class="cert-presented">This certifies that</p>
+              <h2 class="cert-name" id="certName">Your Name Here</h2>
+              <p class="cert-text">has contributed to our planet by planting</p>
+              <div class="cert-tree-pill">
+                <span>🌳</span>
+                <span class="cert-tree-ct">1 Native Tree</span>
+              </div>
+              <div class="cert-meta">
+                <p><strong>Species:</strong> Neem (Azadirachta indica)</p>
+                <p><strong>Location:</strong> Anamalai Hills, Tamil Nadu</p>
+                <p><strong>Planted:</strong> 27 May 2026</p>
+              </div>
+            </div>
+            <div class="cert-foot">
+              <div class="cert-qr-wrap">
+                <div class="cert-qr"><div class="qr-dots"></div></div>
+                <span>Scan to verify</span>
+              </div>
+              <div class="cert-sig">
+                <div class="sig-line">Logendra Lingam</div>
+                <div class="sig-title">Founder, Vanaa</div>
+              </div>
+              <div class="cert-seal">
+                <div class="seal"><span>VANAA<br/>VERIFIED</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="cert-input-wrap">
+            <span>Preview your name on the certificate:</span>
+            <input id="previewName" type="text" placeholder="Type your name…" maxlength="40" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="section section-forest" id="impact">
+    <div class="vine-left"></div>
+    <div class="vine-right"></div>
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="tag tag-gold">Real Results</span>
+        <h2 class="section-title tc-cream">The forest is growing</h2>
+        <p class="section-sub tc-sage">Every number here is a tree that breathes, shades, and heals the earth.</p>
+      </div>
+      <div class="impact-cards">
+        <div class="impact-card reveal" data-delay="0">
+          <div class="ic-icon">🌳</div>
+          <div class="ic-num counter" data-target="70">0</div>
+          <div class="ic-label">Trees Planted</div>
+          <div class="ic-sub">Tamil Nadu, India</div>
+        </div>
+        <div class="impact-card reveal" data-delay="100">
+          <div class="ic-icon">💨</div>
+          <div class="ic-num counter" data-target="1.5" data-decimal="1">0</div>
+          <div class="ic-label">Tonnes CO₂ Offset</div>
+          <div class="ic-sub">Equivalent to removing 3 cars for a year</div>
+        </div>
+        <div class="impact-card reveal" data-delay="200">
+          <div class="ic-icon">🌍</div>
+          <div class="ic-num counter" data-target="43">0</div>
+          <div class="ic-label">Certificates Issued</div>
+          <div class="ic-sub">People who chose to act</div>
+        </div>
+        <div class="impact-card reveal" data-delay="300">
+          <div class="ic-icon">🌿</div>
+          <div class="ic-num counter" data-target="5">0</div>
+          <div class="ic-label">Native Species</div>
+          <div class="ic-sub">Carefully chosen for Tamil Nadu</div>
+        </div>
+      </div>
+      <div class="impact-bars reveal" data-delay="200">
+        <h4 class="tc-cream">Trees planted by contributor type</h4>
+        <div class="bar-list">
+          <div class="bar-row"><span>Builders & Developers</span><div class="bar-track"><div class="bar-fill" data-w="72" style="background:#4ade80;"></div></div><b>72%</b></div>
+          <div class="bar-row"><span>Commuters</span><div class="bar-track"><div class="bar-fill" data-w="15" style="background:#86efac;"></div></div><b>15%</b></div>
+          <div class="bar-row"><span>Individuals & Families</span><div class="bar-track"><div class="bar-fill" data-w="8" style="background:#bbf7d0;"></div></div><b>8%</b></div>
+          <div class="bar-row"><span>Companies & Schools</span><div class="bar-track"><div class="bar-fill" data-w="5" style="background:#dcfce7;"></div></div><b>5%</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKAGES -->
+  <section class="section section-cream" id="plant">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="tag tag-green">Start Today</span>
+        <h2 class="section-title tc-forest">Choose your contribution</h2>
+        <p class="section-sub tc-slate">Every package includes a verified certificate. No hidden fees. No greenwashing.</p>
+      </div>
+      <div class="packages">
+        <div class="pkg reveal" data-delay="0">
+          <div class="pkg-glyph">🌱</div>
+          <h3>Seedling</h3>
+          <div class="pkg-price"><span class="pkg-cur">₹</span><span class="pkg-amt">199</span></div>
+          <p>For individuals who want to start small but make a real difference.</p>
+          <ul>
+            <li>1 native tree planted</li>
+            <li>Digital certificate</li>
+            <li>Tree photo on planting day</li>
+            <li>GPS location tracking</li>
+          </ul>
+          <a href="#" class="btn btn-outline-forest btn-full">Plant 1 Tree</a>
+        </div>
+        <div class="pkg pkg-hero reveal" data-delay="100">
+          <div class="pkg-crown">Most Popular</div>
+          <div class="pkg-glyph">🌳</div>
+          <h3>Grove</h3>
+          <div class="pkg-price"><span class="pkg-cur">₹</span><span class="pkg-amt">799</span></div>
+          <p>For commuters, families, and small builders. A grove in your name.</p>
+          <ul>
+            <li>5 native trees planted</li>
+            <li>Premium digital certificate</li>
+            <li>Printable certificate (A3)</li>
+            <li>Progress updates every 6 months</li>
+            <li>Named section in our forest map</li>
+          </ul>
+          <a href="#" class="btn btn-cream btn-full">Plant 5 Trees</a>
+        </div>
+        <div class="pkg reveal" data-delay="200">
+          <div class="pkg-glyph">🌲</div>
+          <h3>Forest</h3>
+          <div class="pkg-price"><span class="pkg-cur">₹</span><span class="pkg-amt">3,499</span></div>
+          <p>For builders, companies, and institutions making a lasting commitment.</p>
+          <ul>
+            <li>25 trees planted</li>
+            <li>Corporate-grade certificate</li>
+            <li>Dedicated forest plot name</li>
+            <li>Annual impact report</li>
+            <li>Logo on Contributors Wall</li>
+            <li>Shareable ESG badge</li>
+          </ul>
+          <a href="#" class="btn btn-outline-forest btn-full">Plant 25 Trees</a>
+        </div>
+      </div>
+      <p class="pkg-note reveal">Need a custom plan for a large construction project or ESG program? <a href="mailto:hello@vanaa.in">Talk to Logendra →</a></p>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="section cta-banner">
+    <div class="cta-forest-art">
+      <div class="cfa-layer cfa-1"></div>
+      <div class="cfa-layer cfa-2"></div>
+      <div class="cfa-layer cfa-3"></div>
+    </div>
+    <div class="container" style="position:relative;z-index:2;">
+      <div class="cta-inner reveal">
+        <div class="cta-leaves-row">🌿 🍃 🌱 🌿 🍃</div>
+        <h2 class="tc-cream">The best time to plant a tree<br/>was 20 years ago.</h2>
+        <p class="tc-sage">The second best time is right now.</p>
+        <a href="#plant" class="btn btn-forest btn-xl">Plant Your Tree Today</a>
+        <p class="cta-micro">Takes 2 minutes. Lasts a lifetime.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon"><svg viewBox="0 0 40 40" fill="none"><path d="M20 38 C20 38 8 28 8 18 C8 11 13.4 6 20 6 C26.6 6 32 11 32 18 C32 28 20 38 20 38Z" fill="#4ade80" opacity="0.9"/><path d="M20 38 C20 38 12 26 12 18 C12 13.6 15.6 10 20 10" fill="#22c55e"/><line x1="20" y1="22" x2="20" y2="38" stroke="#15803d" stroke-width="1.5"/><line x1="20" y1="28" x2="15" y2="24" stroke="#15803d" stroke-width="1.2"/><line x1="20" y1="33" x2="25" y2="29" stroke="#15803d" stroke-width="1.2"/></svg></div>
+            <span class="logo-text">Vanaa</span>
+          </a>
+          <p>Vanaa means forest. Founded by Logendra Lingam — a school student with a mission to ensure everyone can leave a green legacy.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Twitter"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Platform</h5>
+          <a href="#">How It Works</a>
+          <a href="#">Our Forests</a>
+          <a href="#">Tree Species</a>
+          <a href="#">Verify Certificate</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contribute</h5>
+          <a href="#">For Builders</a>
+          <a href="#">For Commuters</a>
+          <a href="#">For Companies</a>
+          <a href="#">For Institutions</a>
+        </div>
+        <div class="footer-col">
+          <h5>Company</h5>
+          <a href="#">About Vanaa</a>
+          <a href="#founder">Meet the Founder</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Vanaa · Founded by Logendra Lingam · Every visit sponsors a seedling 🌱</p>
+        <div><a href="#">Privacy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
